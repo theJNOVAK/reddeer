@@ -15,6 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
@@ -437,6 +438,12 @@ public class TreeItemHandler {
 				return swtTreeItem.getBounds();
 			}
 		});
+	}
+
+	public Image getImage(final TreeItem swtTreeItem) {
+		return Display.syncExec((ResultRunnable<Image>) 
+				swtTreeItem::getImage
+		);
 	}
 
 	/**

@@ -12,6 +12,7 @@ package org.jboss.reddeer.swt.api;
 
 import java.util.List;
 
+import org.eclipse.swt.graphics.Image;
 import org.jboss.reddeer.common.wait.TimePeriod;
 import org.jboss.reddeer.swt.widgets.Widget;
 
@@ -175,6 +176,12 @@ public interface TreeItem extends Widget {
 	  * @param text text to set
 	  */
 	 void setText(String text);
+
+	 /**
+	  * Gets image from the tree item.
+	  * @return tree item image
+	  */
+	 Image getImage();
 	 
 	 org.eclipse.swt.widgets.TreeItem getSWTWidget();
 }
